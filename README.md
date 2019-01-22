@@ -17,11 +17,11 @@ Bring up a terminal, then go to your project root directory and install local de
 
 ```npm install```
 
-To start local dev server, type in following command in your terminal:
+To start local dev server, type in the following command in your terminal:
 
 ```gulp```
 
-You should now see the working project page on http://localhost:8080, with beautiful gradient background and engaging yet mysterious button :)
+You should now see the working project page on http://localhost:8080, with a beautiful gradient background and engaging yet mysterious button :)
 
 ![Screenshot 1](design/1.png)
 
@@ -39,7 +39,7 @@ Add simple JS validation to form created earlier. Submit button should have hove
 ![Screenshot 2](design/3.png)
 
 ### Task 3
-After submitting the form, popup should disappear after 3 seconds and instead of *Click me* button, there should by displayed *Thank you!* success message, as on the project.
+After submitting the form, popup should disappear after 3 seconds and instead of *Click me* button, there should be displayed *Thank you!* success message, as on the project.
 
 ![Screenshot 2](design/4.png)
 
