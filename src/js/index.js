@@ -55,6 +55,7 @@ function validateForm() {
     if (checkbox.checked == false) {
         console.log("checkbox not checked");
         label[0].classList.add("incorrectLabel");
+        return false;
     } else {
         console.log("checkbox OK");
         label[0].classList.remove("incorrectLabel");
