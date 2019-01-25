@@ -1,2 +1,130 @@
 /* Here goes your CSS */
 @import 'layout/main';
+
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+
+    & h1 {
+        font-size: 32px;
+        font-family: 'Lobster', cursive;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    & input[type=email],input[type=password] {
+        display: block;
+        height: 50px;
+        width: 80%;
+        margin: 15px auto;
+        padding-left: 30px;
+        border: 2px solid #000;
+    }
+
+    & .customCheckbox {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    & label {
+        display: inline-block;
+        width: 90%;
+        font-size: 22px;
+        text-align: right;
+    }
+
+    & input[type=checkbox] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        bottom: -5px;
+        height: 0;
+        width: 0;
+    }
+
+    & .checkmark {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        border: 2px solid #000;
+    }
+
+    & .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    & .customCheckbox input:checked~.checkmark:after {
+        display: block;
+    }
+
+    & .customCheckbox .checkmark:after {
+        left: 7px;
+        top: 0px;
+        width: 8px;
+        height: 18px;
+        border: solid #000;
+        border-width: 0 4px 4px 0;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+
+    & button {
+        display: block;
+        height: 50px;
+        width: 90%;
+        margin: 25px auto 0;
+        margin-bottom: 40px;
+        color: #FFF;
+        background-color: #000;
+        cursor: pointer;
+    }
+
+}
+
+.popup:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup>div {
+    width: 350px;
+    height: 400px;
+    position: relative;
+    margin: calc(50vh - 200px) auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.close {
+    background: #000;
+    color: #FFFFFF;
+    line-height: 28px;
+    position: absolute;
+    right: -8px;
+    text-align: center;
+    top: -8px;
+    width: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: lighten(#000, 15%);
+    }
+}
