@@ -18,7 +18,8 @@
         margin-top: 40px;
     }
 
-    & input[type=email],input[type=password] {
+    & input[type=email],
+    input[type=password] {
         display: block;
         height: 50px;
         width: 80%;
@@ -80,7 +81,7 @@
         border: solid #000;
         border-width: 0 4px 4px 0;
         -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
+        transform: rotate(45deg);
     }
 
     & button {
@@ -92,8 +93,17 @@
         color: #FFF;
         background-color: #000;
         cursor: pointer;
-    }
+        border: 1px solid rgb(14, 13, 13);
 
+        &:hover {
+            background-color: #fd878e;
+            border: 1px solid #f89298;
+        }
+
+        &:focus {
+            outline: none !important;
+        }
+    }
 }
 
 .popup:target {
@@ -127,4 +137,13 @@
     &:hover {
         background-color: lighten(#000, 15%);
     }
+}
+
+.incorrect:focus {
+    outline: none !important;
+    border: 2px solid red;
+}
+
+.incorrectLabel {
+    border: 2px solid red;
 }

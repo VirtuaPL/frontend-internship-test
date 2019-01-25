@@ -10,6 +10,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.min.css">
   <title>Virtua Frontend Internship Test</title>
+
 </head>
 
 <body>
@@ -23,11 +24,11 @@
       <a href="#close" title="Close" class="close">x</a>
 
       <h1>Login</h1>
-      <form action="#" method="post" id="sign-in">
-        <input type="email" name="email" id="sign-in-email" placeholder="E-mail" required>
-        <input type="password" name="password" id="sign-in-password" placeholder="Password" required>
+      <form action="#" method="post" name="loginForm" id="sign-in">
+        <input type="text" name="email" id="sign-in-email" placeholder="E-mail">
+        <input type="text" name="password" id="sign-in-password" placeholder="Password">
         <label class="customCheckbox">I agree to terms & conditions.
-          <input type="checkbox">
+          <input type="checkbox" name="checkbox">
           <span class="checkmark"></span>
         </label>
         <button name="submit" type="submit" id="sign-in-submit">SUBMIT</button>
