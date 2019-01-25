@@ -1,6 +1,16 @@
 /* Here goes your CSS */
 @import 'layout/main';
 
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 42px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
 .popup {
     position: fixed;
     top: 0;
@@ -10,8 +20,9 @@
     z-index: 999;
     opacity: 0;
     pointer-events: none;
+    transition: all 0.2s ease-in;
 
-    & h1 {
+    & h2 {
         font-size: 32px;
         font-family: 'Lobster', cursive;
         text-align: center;
@@ -40,13 +51,13 @@
         width: 90%;
         font-size: 22px;
         text-align: right;
+        padding: 3px 0 9px 0;
     }
 
     & input[type=checkbox] {
         position: absolute;
         opacity: 0;
         cursor: pointer;
-        bottom: -5px;
         height: 0;
         width: 0;
     }
@@ -55,7 +66,7 @@
         position: absolute;
         display: inline-block;
         cursor: pointer;
-        top: 0;
+        top: 5px;
         left: 0;
         height: 25px;
         width: 25px;

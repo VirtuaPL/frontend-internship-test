@@ -8,12 +8,16 @@ window.onload = function () {
 
 };
 
+function clickMe() {
+    location.href = "#show-popup-form";
+}
+
+
 let loginForm = document.querySelector('#sign-in');
 loginForm.addEventListener('submit', function (e) {
     e.preventDefault();
     validateForm();
 }, false);
-
 
 function validateForm() {
     let email = document.forms["loginForm"]["email"];
@@ -21,8 +25,8 @@ function validateForm() {
     let checkbox = document.forms["loginForm"]["checkbox"];
     let label = document.getElementsByTagName("label");
 
+    // email validation
     if (email.value == "") {
-        console.log("empty login form");
         email.classList.add("incorrect");
         email.focus();
         return false;
@@ -30,36 +34,40 @@ function validateForm() {
         const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         if (emailRegex.test(email.value) == false) {
-            console.log("invalid email");
             email.classList.add("incorrect");
             email.focus();
             return false;
         } else {
-            console.log("email OK");
             email.classList.remove("incorrect");
+
+            // password validation
+            if (password.value == "") {
+                password.classList.add("incorrect");
+                password.focus();
+                return false;
+            } else {
+                password.classList.remove("incorrect");
+
+                // checkbox validation
+                if (checkbox.checked == false) {
+                    label[0].classList.add("incorrectLabel");
+                    return false;
+                } else {
+                    label[0].classList.remove("incorrectLabel");
+
+                    // success message
+                    let clickMeBtn = document.getElementById('clickMeBtn');
+                    let successMessage = document.getElementsByTagName('h1');
+                    let submit = document.getElementById('sign-in-submit');
+
+                    clickMeBtn.style.display = "none";
+                    successMessage[0].classList.remove("hidden");
+                    submit.disabled = true;
+                    setTimeout(function () {
+                        location.href = "#";
+                    }, 3000);
+                }
+            }
         }
     }
-
-
-    if (password.value == "") {
-        console.log("empty password form");
-        password.classList.add("incorrect");
-        password.focus();
-        return false;
-    } else {
-        console.log("password OK");
-        password.classList.remove("incorrect");
-    }
-
-
-    if (checkbox.checked == false) {
-        console.log("checkbox not checked");
-        label[0].classList.add("incorrectLabel");
-        return false;
-    } else {
-        console.log("checkbox OK");
-        label[0].classList.remove("incorrectLabel");
-    }
-
-
 }

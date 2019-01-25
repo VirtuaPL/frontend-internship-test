@@ -17,16 +17,18 @@
   <section class="main">
     <button id="clickMeBtn" class="btn btn-main">Click me!</button>
     <!-- Display success message below -->
+    <h1 class="hidden">Thank You!</h1>
   </section>
+
   <div class="popup" id="show-popup-form">
     <!-- Here goes your popup form HTML code -->
     <div>
       <a href="#close" title="Close" class="close">x</a>
 
-      <h1>Login</h1>
+      <h2>Login</h2>
       <form action="#" method="post" name="loginForm" id="sign-in">
-        <input type="email" name="email" id="sign-in-email" placeholder="E-mail">
-        <input type="password" name="password" id="sign-in-password" placeholder="Password">
+        <input type="email" name="email" id="sign-in-email" placeholder="E-mail" required>
+        <input type="password" name="password" id="sign-in-password" placeholder="Password" required>
         <label class="customCheckbox">I agree to terms & conditions.
           <input type="checkbox" name="checkbox">
           <span class="checkmark"></span>
@@ -36,8 +38,8 @@
 
     </div>
   </div>
-  <script src="js/index.js" charset="utf-8"></script>
 
+  <script src="js/index.js" charset="utf-8"></script>
 </body>
 
 </html>
