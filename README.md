@@ -44,4 +44,4 @@ After submitting the form, popup should disappear after 3 seconds and instead of
 ![Screenshot 2](design/4.png)
 
 ## Send us your repo!
-After finishing all tasks, send us link to your repo at [career@wearevirtua.com](mailto:career@wearevirtua.com).
+After finishing all tasks, send us link to your repo at [jobs@wearevirtua.com](mailto:jobs@wearevirtua.com).
