@@ -1,4 +1,7 @@
-/* Main styles */
+// Main styles
+$primary-color: #fcaf32;
+$secondary-color: #fc888e;
+
 html,
 body {
   font-family: 'Lato', sans-serif;
@@ -7,9 +10,9 @@ body {
 }
 
 .main {
-  background: linear-gradient(-45deg, #fcaf32 0%, #fc888e 100%);
-  display: flex;
   align-items: center;
+  background: linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
+  display: flex;
   justify-content: center;
   min-height: 100vh;
 }
@@ -24,7 +27,7 @@ body {
   height: 60px;
   outline: none;
   padding: 0 20px;
-  transition: all .5s ease;
+  transition: transform .5s ease;
 
   &:hover {
     transform: scale(1.15);
