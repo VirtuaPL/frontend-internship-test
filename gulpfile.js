@@ -3,7 +3,6 @@ const sass = require('gulp-sass');
 const sasslint = require('gulp-sass-lint');
 const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
-const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 
@@ -12,7 +11,6 @@ gulp.task('browserSync', function() {
     server: {
       watch: true,
       baseDir: 'dist'
-
     },
   })
 });
@@ -27,9 +25,8 @@ gulp.task('sass-lint', function() {
 
 gulp.task('sass', function() {
   return gulp.src('src/scss/styles.scss')
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(concat('styles.min.css'))
-    .pipe(cssnano())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({
         stream: true
