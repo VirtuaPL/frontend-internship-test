@@ -1,2 +1,72 @@
-// Here goes your CSS
 @import 'layout/main';
+h1 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 22px;
+    margin: 10px 0 15px 0px;
+  }
+
+  .popup {
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: auto;
+    height: 100px;
+  }
+
+  .form-container {
+    max-width: 223px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 2%;
+  }
+
+  .form-control {
+    font-size: 11px;
+    width: 72%;
+    padding: 15px 20px 15px 20px;
+    margin: 0 0 15px 10px;
+    background-color: white;
+    border: solid black;
+    border-width: 1px;
+  }
+
+  .btn_submit {
+    background-color: black;
+    color: white;
+    font-size: 11px;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 91%;
+    margin: 23px 0px 10px 10px;
+  }
+
+  .close {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 21px;
+    transform: rotate(45deg);
+    width: 6px;
+    padding: 0 18px 2px 6px;
+    position: absolute;
+    top: -7px;
+    right: -8px;
+  }
+
+  .checkboxtext {
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  input[type=checkbox]
+  {
+    transform: scale(1.5);
+    margin-left: 12px;
+  }

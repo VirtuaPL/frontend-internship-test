@@ -11,12 +11,21 @@
   </head>
   <body>
     <section class="main">
-      <button id="show-popup-form" class="btn btn-main">Click me!</button>
+      <button id="show-popup-form" class="btn btn-main" onclick="openForm()">Click me!</button>
       <!-- Display success message below -->
     </section>
-    <div class="popup">
-      <!-- Here goes your popup form HTML code -->
+    <div class="popup" id="myForm">
+      <form action="#" class="form-container">
+        <h1>Login</h1>
+        <input type="text" class="username form-control" placeholder="E-mail" name="email" required>
+        <input type="password" class="password form-control" placeholder="Password" name="psw" required>
+        <input  type="checkbox" name="terms">
+        <span class="checkboxtext">I agree to terms & conditions.</span>
+        <button type="submit" class="btn_submit">SUBMIT</button>
+        <div data-dismiss="modal" class="close" onclick="closeForm()">&#10010;</div>
+      </form>
     </div>
+
     <script src="js/index.min.js" charset="utf-8"></script>
   </body>
 </html>
