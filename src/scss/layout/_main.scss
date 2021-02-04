@@ -1,35 +1,41 @@
 // Main styles
-$primary-color: #fcaf32;
-$secondary-color: #fc888e;
+@import './variables';
 
 html,
 body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  padding: 0;
+	font-family: $font-lato;
+	margin: 0;
+	padding: 0;
 }
 
 .main {
-  align-items: center;
-  background: linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
+	align-items: center;
+	background: linear-gradient(
+		-45deg,
+		$color-primary 0%,
+		$color-secondary 100%
+	);
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.btn {
+	cursor: pointer;
 }
 
 .btn-main {
-  appearance: none;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  font-family: 'Lobster', cursive;
-  font-size: 42px;
-  height: 60px;
-  outline: none;
-  padding: 0 20px;
-  transition: transform .5s ease;
+	appearance: none;
+	background: transparent;
+	border: 0;
+	font-family: $font-lobster;
+	font-size: 42px;
+	height: 60px;
+	outline: none;
+	padding: 0 20px;
+	transition: transform 0.5s ease;
 
-  &:hover {
-    transform: scale(1.15);
-  }
+	&:hover {
+		transform: scale(1.15);
+	}
 }

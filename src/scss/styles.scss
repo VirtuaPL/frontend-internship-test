@@ -1,2 +1,128 @@
 // Here goes your CSS
 @import 'layout/main';
+@import 'layout/reset';
+
+// POPUP
+.popup {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	background-color: $color-white;
+	border-radius: 5px;
+	padding: 40px;
+	gap: 24px;
+
+	&.show {
+		display: grid;
+	}
+
+	// Heading
+	& .heading {
+		font-family: $font-lobster;
+		font-size: 24px;
+		text-align: center;
+	}
+
+	// Btn close
+	& .btn-close {
+		$sizeButton: 24px;
+		$sizeTimes: 18px;
+
+		position: absolute;
+		top: ($sizeButton - $sizeTimes) / -2;
+		right: ($sizeButton - $sizeTimes) / -2;
+		width: $sizeButton;
+		height: $sizeButton;
+		border-radius: 50%;
+		background-color: $color-black;
+		transition: 0.2s background-color;
+
+		&:hover {
+			background-color: $color-grey;
+		}
+
+		& .fa-times {
+			width: $sizeTimes;
+			height: $sizeTimes;
+			color: $color-white;
+			font-size: $sizeTimes;
+		}
+	}
+
+	// Form
+	& form {
+		display: grid;
+		gap: 24px;
+	}
+
+	// Inputs group
+	& .inputs-group {
+		display: grid;
+		gap: 16px;
+
+		& input[type='checkbox'] {
+			display: none;
+		}
+
+		& .custom-label-checkbox {
+			display: flex;
+			cursor: pointer;
+			user-select: none;
+
+			&:hover .custom-checkbox,
+			& input[type='checkbox']:checked ~ .custom-checkbox {
+				border-color: $color-grey;
+			}
+
+			& input[type='checkbox']:checked ~ .custom-checkbox .fa-check {
+				display: block;
+			}
+
+			& .custom-checkbox {
+				$size: 20px;
+
+				float: left;
+				width: $size;
+				height: $size;
+				border: 2px solid $color-black;
+				transition: 0.2s border-color;
+
+				& .fa-check {
+					display: none;
+				}
+			}
+
+			& .text-agreement {
+				float: left;
+				margin-left: 8px;
+				font-size: 14px;
+			}
+		}
+
+		& #input-email,
+		& #input-password {
+			height: 40px;
+			width: 100%;
+			border: 1px solid $color-black;
+			padding: 0 12px;
+		}
+	}
+
+	// Button submit
+	& .button-submit {
+		width: 100%;
+		height: 40px;
+		background-color: black;
+		color: #fff;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: 0.2s background-color;
+
+		&:hover {
+			background-color: $color-secondary;
+		}
+	}
+}

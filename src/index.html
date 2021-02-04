@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Lobster&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.min.css">
-    <title>Virtua Frontend Internship Test</title>
-  </head>
-  <body>
-    <section class="main">
-      <button id="show-popup-form" class="btn btn-main">Click me!</button>
-      <!-- Display success message below -->
-    </section>
-    <div class="popup">
-      <!-- Here goes your popup form HTML code -->
-    </div>
-    <script src="js/index.min.js" charset="utf-8"></script>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Lato|Lobster&amp;subset=latin-ext"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+			integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/styles.min.css" />
+		<title>Virtua Frontend Internship Test</title>
+	</head>
+	<body>
+		<section class="main">
+			<button id="show-popup-form" class="btn btn-main">Click me!</button>
+			<!-- Display success message below -->
+		</section>
+		<div id="popup-login" class="popup">
+			<!-- Here goes your popup form HTML code -->
+			<button id="close-popup-login" class="btn btn-close">
+				<i class="fas fa-times"></i>
+			</button>
+			<div class="heading">Login</div>
+			<form>
+				<div class="inputs-group">
+					<input id="input-email" type="text" placeholder="E-mail" />
+					<input
+						id="input-password"
+						type="password"
+						placeholder="Password"
+						autocomplete="off"
+					/>
+					<label for="checkbox1" class="custom-label-checkbox">
+						<input id="checkbox1" type="checkbox" />
+						<div class="custom-checkbox">
+							<i class="fas fa-check"></i>
+						</div>
+						<div class="text-agreement">
+							I agree to terms & conditions
+						</div>
+					</label>
+				</div>
+
+				<button class="button-submit" type="submit">Submit</button>
+			</form>
+		</div>
+		<script src="js/index.min.js" charset="utf-8"></script>
+	</body>
 </html>
